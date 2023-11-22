@@ -1,16 +1,10 @@
-apiVersion: argoproj.io/v1alpha1
-kind: Application
-metadata:
-  name: formation-mlops-api
 spec:
   project: default
   source:
-    repoURL: https://github.com/<your-github-id>/formation-mlops.git
+    repoURL: https://github.com/antoine-palazz/formation-mlops.git
     targetRevision: HEAD
     path: kubernetes
   destination:
     server: https://kubernetes.default.svc
-    namespace: user-<your-sspcloud-id>
-  syncPolicy:
-    automated:
-      selfHeal: true
+    namespace: user-apalazzolo
+  
